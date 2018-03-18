@@ -134,6 +134,7 @@ Expected to find a ${mdFilenames.join(' or ')} at: ${pathToLocalWct}/
 
     // Serve up project & dependencies via polyserve
     const polyserveResult = await startServers({
+      wctPlugin: true,
       root: options.root,
       compile: options.compile,
       hostname: options.webserver.hostname,
@@ -176,6 +177,7 @@ Expected to find a ${mdFilenames.join(' or ')} at: ${pathToLocalWct}/
     // webservers as they please.
     for (const server of servers) {
       await wct.emitHook('prepare:webserver', server.app);
+      server.app['_delayedAppConfig']();
     }
 
     options.webserver._servers = servers.map(s => {
