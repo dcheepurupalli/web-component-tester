@@ -68,7 +68,7 @@ export function webserver(wct: Context): void {
 
     // Check for client-side compatibility.
     const pathToLocalWct =
-        path.join(options.root, 'bower_components', 'web-component-tester');
+        path.join(options.root, 'public/bower_components', 'web-component-tester');
     let version: string|undefined = undefined;
     const mdFilenames = ['package.json', 'bower.json', '.bower.json'];
     for (const mdFilename of mdFilenames) {
