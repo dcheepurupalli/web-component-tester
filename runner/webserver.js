@@ -66,7 +66,7 @@ function webserver(wct) {
             const additionalRoutes = new Map();
             const packageName = path.basename(options.root);
             // Check for client-side compatibility.
-            const pathToLocalWct = path.join(options.root, 'bower_components', 'web-component-tester');
+            const pathToLocalWct = path.join(options.root, 'public/bower_components', 'web-component-tester');
             let version = undefined;
             const mdFilenames = ['package.json', 'bower.json', '.bower.json'];
             for (const mdFilename of mdFilenames) {
