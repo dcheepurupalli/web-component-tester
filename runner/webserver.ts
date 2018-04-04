@@ -138,6 +138,7 @@ Expected to find a ${mdFilenames.join(' or ')} at: ${pathToLocalWct}/
       root: options.root,
       compile: options.compile,
       hostname: options.webserver.hostname,
+        componentDir: 'public/bower_components'
       headers: DEFAULT_HEADERS, packageName, additionalRoutes,
     });
     let servers: Array<MainlineServer|VariantServer>;
